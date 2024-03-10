@@ -41,7 +41,6 @@ h3 {
 }
 .friendsBox {
   display: flex;
-  /* justify-content: center; */
   justify-content: space-between;
 }
 
@@ -113,11 +112,9 @@ h3 {
 .maininDrop {
   font-size: 15px;
 }
-.closeButton {
-  background-color: transparent;
-  border: none;
+.closedIcon {
+  text-align: center;
   cursor: pointer;
-  font-size: 15px;
-  width: 100%;
-  text-align: end;
+  border: 0.5px solid #253746;
+  padding: 3px;
 }

@@ -1,0 +1,37 @@
+.spinner {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin: 100px auto;
+  }
+  
+  .spinner div {
+    width: 15px;
+    height: 15px;
+    background-color: #333;
+    border-radius: 100%;
+    position: absolute;
+    animation: bounce 0.7s infinite ease-in-out;
+  }
+  
+  .spinner .dot1 {
+    top: 0;
+    left: 0;
+    animation-delay: -0.4s;
+  }
+  
+  .spinner .dot2 {
+    top: 0;
+    right: 0;
+    animation-delay: -0.2s;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+  }
+  

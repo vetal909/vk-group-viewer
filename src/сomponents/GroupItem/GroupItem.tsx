@@ -64,9 +64,11 @@ const GroupItem: React.FC<Props> = ({ group }) => {
             isDropdownOpen && group.friends ? styles.active : ""
           }`}
         >
-          <button className={styles.closeButton} onClick={closeDropdown}>
-            <p className={styles.closeButton}>Х</p>
-          </button>
+          <div className={styles.closeButton}>
+            <p className={styles.closedIcon} onClick={closeDropdown}>
+              закрыть
+            </p>
+          </div>
           <p className={styles.maininDrop}>Друзья в группе:</p>
           <ul className={styles.friendList}>
             {group.friends.map((friend, index) => (
