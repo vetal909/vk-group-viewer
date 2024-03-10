@@ -1,42 +1,123 @@
+@font-face {
+  font-family: "Commissioner";
+  src: url("/font/Commissioner-VariableFont_FLAR\,VOLM\,slnt\,wght.ttf")
+    format("truetype-variations");
+}
+@font-face {
+  font-family: "TTNorms";
+  src: url("/font/TTNorms-Bold.ttf") format("truetype-variations");
+}
 .groupItem {
-  width: 250px;
-  padding: 20px;
-  margin: 10px;
+  font-family: "Commissioner";
+  display: flex;
+  gap: 20px;
   border: 1px solid #ccc;
+  color: #253746;
+  padding: 20px;
+  position: relative;
   border-radius: 5px;
-  display: inline-block;
 }
 
-.groupName {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.infoContainer {
-  margin-bottom: 10px;
+.groupItem p,
+h3 {
+  margin: 1px;
 }
 
 .avatar {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  border: 0.5px solid #253746;
+}
+.groupName {
+  font-family: "TTNorms";
+  font-size: 23px;
+}
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.friendsBox {
+  display: flex;
+  /* justify-content: center; */
+  justify-content: space-between;
+}
+
+.showFriends {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  margin-left: 5px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .friends {
-  margin-top: 10px;
+  position: absolute;
+  top: calc(100% + 0px);
+  right: 0;
+  background-color: #f6f6f6;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px 20px 20px 20px;
+  z-index: 2;
+  display: none;
+  justify-content: space-between;
+}
+
+.friends.active {
+  display: block;
 }
 
 .friendList {
   list-style-type: none;
   padding: 0;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 8px;
 }
-
+.friendList li:hover {
+  color: rgb(117, 117, 117);
+}
 .friendList li {
   margin-bottom: 5px;
 }
-.showFriends {
-  cursor: pointer;
+.infotx1 {
+  font-size: 12px;
+  display: flex;
+  gap: 10px;
 }
-.showFriends:hover {
-  color: rgb(255, 68, 0);
+.infotx1 img {
+  width: 15px;
+  fill: #253746;
+}
+.questionMark {
+  color: #253746;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  font-size: 18px;
+  background-color: white;
+  border: 0.5px solid #253746;
+}
+.maininDrop {
+  font-size: 15px;
+}
+.closeButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  width: 100%;
+  text-align: end;
 }

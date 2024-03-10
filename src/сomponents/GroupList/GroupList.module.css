@@ -1,5 +1,6 @@
 .groupList {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
-    grid-gap: 20px; 
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
