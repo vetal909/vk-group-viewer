@@ -16,11 +16,18 @@ const GroupFilter: React.FC<{
   if (!avatarColors.some(Boolean)) {
     return <div>Цвета аватаров не найдены</div>;
   }
-  const [filters, setFilters] = useState({
+  const initialFilters = {
     privacyType: "all",
     avatarColor: "any",
     hasFriends: false,
-  });
+  };
+
+  const [filters, setFilters] = useState(initialFilters);
+
+  const handleResetFilters = () => {
+    setFilters(initialFilters);
+    onFilterChange(initialFilters);
+  };
 
   const handleFilterChange = (name: string, value: string | boolean) => {
     setFilters((prevFilters) => ({
@@ -95,6 +102,7 @@ const GroupFilter: React.FC<{
         />
         С друзьями
       </label>
+      <button onClick={handleResetFilters}>Сбросить</button>
     </div>
   );
 };
